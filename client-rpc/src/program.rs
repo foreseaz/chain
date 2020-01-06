@@ -62,6 +62,14 @@ pub struct Options {
         help = "Number of requests per batch when syncing wallet"
     )]
     pub batch_size: usize,
+    #[structopt(
+        name = "block_height_ensure",
+        short,
+        long,
+        default_value = "50",
+        help = "Number of block height to rollback the utxos in the pending transactions"
+    )]
+    pub block_height_ensure: u64,
 }
 
 #[allow(dead_code)]
